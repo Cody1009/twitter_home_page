@@ -1,2 +1,73 @@
 
-<h1>This is the home page for training course</h1>
+<!--ヘッダー部分-->
+<header class="topbar">
+  <div class="global-nav">
+    <div class="global-nav-inner">
+      <div class="container">
+        <!--中心のツイッターアイコン-->
+        <%= fa_icon 'twitter',
+                    class: 'twitter-center-icon'
+        %>
+        <!-- メニューリスト(ホーム、通知など) -->
+        <div class="navigation">
+          <ul class="nav" style="list-style: none" id="global-actions">
+
+            <li id="nav-home">
+              <a href="#" class="nav-item active-nav">
+                <span class="text">
+                  <%= fa_icon 'home', left: true %>ホーム
+                </span>
+              </a>
+            </li>
+
+            <li id="nav-moment">
+              <a href="#" class="nav-item">
+
+               <span class="text">
+                 <%= fa_icon 'bolt', left: true %>
+                 モーメント
+               </span>
+              </a>
+            </li>
+
+            <li id="nav-notification">
+              <a href="#" class="nav-item">
+               <span class="text">
+                 <%= fa_icon 'bell-o', left: true %>
+                 通知
+               </span>
+              </a>
+            </li>
+
+            <li id="nav-message">
+              <a href="#" class="nav-item">
+                <span class="text">
+                   <%= fa_icon 'envelope-o', left: true %>
+                  メッセージ
+                </span>
+
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!--右側の検索やプロフィール要素-->
+        <div class="other-nav pull-right">
+          <div class="search-bar-box">
+            <label class="hide-box" for="search-query"></label>
+            <input class="search-input" id="search-query" type="search" placeholder="キーワード検索">
+            <input type="submit" class="search-icon"  value="&#xf002;">
+          </div>
+
+
+              <%= fa_icon 'user-circle',
+                          class: 'user-profile-circle'
+              %>
+            <button class="tweet-btn">ツイート</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</header>

@@ -1,0 +1,24 @@
+//theme color
+$twitter-theme-color: #1D8DEE;
+$twitter-btn-color:#4AB3F4;
+//text colors used often
+$twitter-text-and-border:#1DA1F2;
+$normal-text-color: #14171a;
+$nav-color:#66757f;
+//background color used often
+$white-background:#fff;
+
+
+// mixin
+@mixin round-btn-common {
+  border-radius: 100px;
+  box-shadow: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@mixin a-common{
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+}

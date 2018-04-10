@@ -1,0 +1,265 @@
+@import "twitter_variables";
+//@import "fa_icons_style";
+
+/* common */
+input[type="search"],
+input[type="submit"],
+textarea,
+select {
+  outline: none;
+}
+
+body {
+  background: #e6ecf0;
+  color: $normal-text-color;
+  font-size: 14px;
+  line-height: 20px;
+  overflow-y: scroll;
+  font-family: Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+  Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+ol, ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  display: block;
+}
+
+.container {
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+}
+
+/* media query */
+@media screen and (min-width: 1236px) {
+  .global-nav {
+    .container {
+      max-width: 1190px;
+      .twitter-center-icon {
+        position: absolute;
+        left: 50%;
+        margin-left: -12px;
+      }
+    }
+  }
+}
+
+/* header part */
+
+.topbar {
+  backface-visibility: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+// inside of topbar
+.global-nav {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  height: 46px;
+  position: relative;
+  width: 100%;
+  .global-nav-inner {
+    background: $white-background;
+    height: 46px;
+  }
+  .container {
+    height: 100%;
+    text-align: center;
+    width: auto;
+
+    /* 左側のメニューリスト */
+    .navigation {
+      float: left;
+      display: inline-block;
+      // navigation items, ie home.
+      .nav {
+        text-align: left;
+        li {
+
+          overflow: hidden;
+          position: relative;
+          float: left;
+          // text-align:left;
+          text-align: inherit;
+
+          a {
+            height: 27px;
+            color: $nav-color;
+            position: relative;
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            line-height: 1;
+            padding: 0 14px 0 4px;
+            margin-left: 3px;
+            margin-top: 17px;
+            @include a-common;
+            &.active-nav {
+              border-bottom: 2px solid #1c94e0;
+              border-bottom-color: $twitter-text-and-border;
+              color: $twitter-text-and-border;
+            }
+
+            &:hover {
+              border-bottom: 2px solid #1c94e0;
+              border-bottom-color: $twitter-text-and-border;
+              color: $twitter-text-and-border;
+            }
+
+            .text {
+              margin-left: 3px;
+              margin-top: 17px;
+              padding: 0;
+            }
+
+          }
+        }
+      }
+
+    }
+
+    /* 右側のメニュー */
+    .other-nav {
+      align-items: center;
+      display: flex;
+      padding: 0;
+      width: 374px;
+      height: 100%;
+      /* 検索ボックスのdivタグ*/
+      .search-bar-box {
+        position: relative;
+        height: 33px;
+        margin: 6.5px 1px 6.5px 0;
+        font-size: 12px;
+        width: 221px;
+        border: none;
+        .hide-box {
+          border: 0;
+          clip: rect(0, 0, 0, 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
+        }
+
+        //TODO 検索ボックスの虫めがねアイコンのカーソルを変化させる
+
+        //実際の検索フォーム
+        .search-input {
+          background: {
+            position: 187px center;
+            color: #f5f8fa;
+          }
+          border-radius: 21px;
+          border: 1px solid #e6ecf0;
+          box-sizing: border-box;
+          color: $normal-text-color;
+          display: block;
+          font-size: 12px;
+          height: 32px;
+          line-height: 16px;
+          padding: 8px 32px 8px 20px;
+          width: 100%;
+          &:focus {
+            background-color: $white-background;
+            border: 2px solid $twitter-text-and-border;
+            opacity: 1;
+            color: $normal-text-color;
+          }
+        }
+
+
+        //  検索フォームの中に入れたい検索ボタン
+        .search-icon{
+          //親要素はsearch-bar-boxをもつdivタグ
+          position: absolute;
+          top: 5px;
+          left: 185px;
+          height: 23px;
+          width: 25px;
+          font-family: FontAwesome;
+          font-size: 17px;
+          background: rgba(255,0,0,0);
+          border:none;
+          cursor: pointer;
+
+        }
+
+      }
+    }
+  }
+}
+
+/* buttons */
+.tweet-btn{
+  @include round-btn-common;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  border: 1px solid $twitter-text-and-border;
+  color: #fff;
+  background-color: $twitter-btn-color;
+  &:hover{
+    background-color:$twitter-text-and-border;
+
+  }
+}
+
+/* レイアウト */
+
+.pull-right {
+  float: right;
+  text-align: left;
+}
+
+//TODO jquery で出し分け ヘッダーのクリックされた要素だけスタイル適用
+.active-nav {
+  border-bottom: 2px solid #1c94e0;
+  border-bottom-color: $twitter-text-and-border;
+  color: $twitter-text-and-border;
+}
+
+/* fa-icons*/
+
+/* header  */
+
+/* 中央のツイッターアイコン */
+.twitter-center-icon {
+  color: $twitter-theme-color;
+  cursor: pointer;
+  font-size: 24px;
+  margin-top: 14px;
+  transition: all .25s;
+  display: inline-block;
+  width: 24px;
+  height: 21px;
+  text-align: center;
+}
+
+.fa-home {
+  margin-right: 5px;
+}
+
+.fa-user-circle {
+  font-size: 32px;
+  color: $nav-color;
+  margin: {
+    right: 10px;
+    left: 10px;
+  }
+}
+
