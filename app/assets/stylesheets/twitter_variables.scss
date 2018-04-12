@@ -5,6 +5,8 @@ $twitter-btn-color:#4AB3F4;
 $twitter-text-and-border:#1DA1F2;
 $normal-text-color: #14171a;
 $nav-color:#66757f;
+$light-gray-color:#657786;
+$gray-border-color:#e6ecf0;
 //background color used often
 $white-background:#fff;
 
@@ -17,8 +19,55 @@ $white-background:#fff;
   white-space: nowrap;
 }
 
-@mixin a-common{
+@mixin a-common {
   text-decoration: none;
   background: transparent;
   cursor: pointer;
+}
+
+@mixin dashboard-box-border-style{
+  border: 1px solid $gray-border-color;
+}
+
+@mixin hover-common{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@mixin user-stats-text{
+  color: $light-gray-color;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: .02em;
+  line-height: 16px;
+  &:hover{
+    @include hover-common;
+    color: $twitter-text-and-border;
+  }
+}
+
+
+@mixin user-stats-a{
+  @include a-common;
+  color: $twitter-text-and-border;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@mixin user-stats-child{
+  width: 128px;
+  height: 30px;
+  p {
+    @include user-stats-text;
+    margin-bottom: 4px;
+  }
+  a {
+
+    @include user-stats-a;
+  }
+}
+
+@mixin user-id-style{
+  color: #657786;
+  font-size: 14px;
 }
