@@ -164,7 +164,7 @@
 
 <!--中心のダッシュボード ツイート送信と他人のツイートを見られる-->
   <div class="center-dashboard">
-    <!---->
+    <!--上部のいまどうしてる？-->
     <div class="tweet-bar-wrapper">
       <div class="user-icon">
         <%= fa_icon 'user-circle-o',
@@ -173,6 +173,115 @@
       <div class="tweet-box">
         <input type="text" class="tweet-input" placeholder="いまどうしてる？">
         <input type="submit" class="upload-tweet-photo" value="&#xf03e;">
+      </div>
+    </div>
+
+    <!--ツイートの中身-->
+    <div class="tweet-content-wrapper">
+      <div class="tweet-user-icon-box">
+        <%= fa_icon 'user-circle-o',
+                    class: 'tweet-user-icon'
+        %>
+      </div>
+      <div class="tweet-content-box">
+        <div class="tweet-user-head">
+          <a href="#" class="tweet-user-name">糸井重里</a>
+          <p class="recommended-user-id">
+            @shigesato_itoi
+            <small>・</small>
+            6時間
+          </p>
+          <div class="angle-down-box">
+            <%= fa_icon 'angle-down',
+                        class: 'tweet-angle-down'%>
+          </div>
+
+        </div>
+        <div class="tweet-content">
+          <p>
+            text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.
+
+          </p>
+          <div class="iframe-wrapper">
+            <iframe width="506" height="265" src="https://www.youtube.com/embed/aXuM-LpVD50" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="tweet-actions-footer">
+            <div class="action">
+              <%= fa_icon 'comment-o',
+                          class: 'action-icon' %>
+              <span class="action-counter">67</span>
+            </div>
+            <div class="action">
+              <%= fa_icon 'retweet',
+                          class: 'action-icon' %>
+              <span class="action-counter">1909</span>
+            </div>
+            <div class="action">
+              <%= fa_icon 'heart-o',
+                          class: 'action-icon' %>
+              <span class="action-counter">4564</span>
+            </div>
+            <div class="action">
+              <%= fa_icon 'envelope-o',
+                          class: 'action-icon' %>
+              <span class="action-counter">3450</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tweet-content-wrapper">
+      <div class="tweet-user-icon-box">
+        <%= fa_icon 'user-circle-o',
+                    class: 'tweet-user-icon'
+        %>
+      </div>
+      <div class="tweet-content-box">
+        <div class="tweet-user-head">
+          <a href="#" class="tweet-user-name">堀江貴文</a>
+          <p class="recommended-user-id">
+            @shigesato_itoi
+            <small>・</small>
+            8時間
+          </p>
+          <div class="angle-down-box">
+            <%= fa_icon 'angle-down',
+                        class: 'tweet-angle-down'%>
+          </div>
+
+        </div>
+        <div class="tweet-content">
+          <p>
+            text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.
+          </p>
+          <div class="iframe-wrapper">
+            <iframe width="506" height="265" src="https://www.youtube.com/embed/l8urYiZ_wME" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="tweet-actions-footer">
+            <div class="action">
+              <%= fa_icon 'comment-o',
+                  class: 'action-icon' %>
+              <span class="action-counter">45</span>
+            </div>
+            <div class="action">
+              <%= fa_icon 'retweet',
+                          class: 'action-icon' %>
+              <span class="action-counter">190</span>
+            </div>
+            <div class="action">
+              <%= fa_icon 'heart-o',
+                          class: 'action-icon' %>
+              <span class="action-counter">456</span>
+            </div>
+            <div class="action">
+              <%= fa_icon 'envelope-o',
+                          class: 'action-icon' %>
+              <span class="action-counter">345</span>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
 
@@ -206,6 +315,10 @@
             %>
             <a href="#" class="recommended-user-name">糸井重里</a>
             <p class="recommended-user-id">@shigesato_itoi</p>
+            <div class="erase-icon-box">
+              <%= fa_icon 'times',
+               class: 'erase-user-icon' %>
+            </div>
           </div>
           <button class="follow-btn">フォローする</button>
         </div>
@@ -218,6 +331,10 @@
             %>
             <a href="#" class="recommended-user-name">織田裕二</a>
             <p class="recommended-user-id">@oda_706</p>
+            <div class="erase-icon-box">
+              <%= fa_icon 'times',
+                          class: 'erase-user-icon' %>
+            </div>
           </div>
           <button class="follow-btn">フォローする</button>
         </div>
@@ -229,6 +346,10 @@
             %>
             <a href="#" class="recommended-user-name">落合陽一</a>
             <p class="recommended-user-id">@ochiai_306</p>
+            <div class="erase-icon-box">
+              <%= fa_icon 'times',
+                          class: 'erase-user-icon' %>
+            </div>
           </div>
           <button class="follow-btn">フォローする</button>
         </div>

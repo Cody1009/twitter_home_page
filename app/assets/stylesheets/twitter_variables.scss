@@ -71,3 +71,14 @@ $white-background:#fff;
   color: #657786;
   font-size: 14px;
 }
+
+@mixin dynamic-div-height{
+  min-height:50px;
+  height:auto !important;
+  height:50px;
+}
+
+@mixin tweet-action-icon{
+  color: $light-gray-color;
+  font-size: 18px;
+}
